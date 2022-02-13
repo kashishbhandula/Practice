@@ -1,10 +1,12 @@
 const port=4000;
 
 const Express=require('express');
+const ExpressLayout=require('express-ejs-layouts');
 
 const app=Express();
 
 app.use(Express.urlencoded());
+app.use(ExpressLayout);
 app.set('view engine','ejs');
 app.set('views','./View')
 
