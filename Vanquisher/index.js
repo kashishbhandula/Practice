@@ -4,13 +4,12 @@ const Express=require('express');
 
 const app=Express();
 
+app.use(Express.urlencoded());
 app.set('view engine','ejs');
-app.set('view','./Views')
+app.set('views','./View')
 
-app.get('/',function(req,res){
+app.use('/',require('./Routers'));
 
-    res.end("<h1>Hello</h1>")
-})
 app.listen(port,function(err){
     if(err){console.log(`Server in not listening on the port ${port}`);}
     else console.log(`Server in listening on the port ${port}`);
