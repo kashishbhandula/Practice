@@ -10,6 +10,10 @@ app.use(ExpressLayout);
 app.set('view engine','ejs');
 app.set('views','./View')
 
+app.use(Express.static('./Assets'));
+app.set('layout extraStyles',true);
+app.set('layout extraScripts',true);
+
 app.use('/',require('./Routers'));
 
 app.listen(port,function(err){
