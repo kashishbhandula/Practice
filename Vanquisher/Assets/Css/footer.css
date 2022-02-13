@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#footer{
+    position: absolute;
+    height: 10vh;
+    width: 100%;
+    bottom: -10px;
+    
+}
