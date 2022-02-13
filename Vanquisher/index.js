@@ -4,6 +4,9 @@ const Express=require('express');
 
 const app=Express();
 
+app.set('view engine','ejs');
+app.set('view','./Views')
+
 app.get('/',function(req,res){
 
     res.end("<h1>Hello</h1>")
