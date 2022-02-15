@@ -2,7 +2,9 @@ const port=5000;
 
 const Express=require('express');
 const ExpressLayout=require('express-ejs-layouts');
+const Mongoose=require('mongoose');
 
+const db=require('./Config/mongoose.js');
 const app=Express();
 
 app.use(Express.urlencoded());
